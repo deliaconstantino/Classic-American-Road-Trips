@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+require_relative "../lib/classic_american_road_trips"
+
+puts "hello"
+
+ClassicAmericanRoadTrips::CLI.new.call
