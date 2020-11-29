@@ -16,3 +16,9 @@ Classic American Road trips
   if no, ask user if they'd like to choose another route
     -if yes, display all road trips again
     -if no say thank you for visiting and exit
+
+
+classes needed:
+1. route-knows info about route including, name, number?, states visited, route highlights, info blurb, and where to look for more info
+2. CLI: interacts for user and app, gets selection and outputs
+3. state? maybe cli can find routes that go through certain states?
