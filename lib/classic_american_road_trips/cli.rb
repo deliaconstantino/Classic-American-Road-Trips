@@ -69,9 +69,21 @@ class ClassicAmericanRoadTrips::CLI
     puts "2. route 2 --goes through state b"
     puts "would you like to see more about one of these routes (y/n)?"
 
-    if "y" || "yes"
-      puts "please select a number"
-      
+    input = gets.strip
+
+    if input == "y" || input == "yes"
+      puts "please write the number of the route you're like to learn more about:"
+      puts "routes from above"
+
+    elsif input == "n" || input == "no"
+      puts "Would you like to see all routes again? (y/n)"
+
+    end
+
+  
+
+
+
 
   end
 
