@@ -5,6 +5,7 @@ require 'pry'
 
 require_relative "./classic_american_road_trips/version"
 require_relative "./classic_american_road_trips/cli"
+require_relative "./classic_american_road_trips/scraper"
 
 module ClassicAmericanRoadTrips
   class Error < StandardError; end
