@@ -2,7 +2,7 @@ class ClassicAmericanRoadTrips::Scraper
   def scrape_page
     page = Nokogiri::HTML(open("https://www.roadtripusa.com/"))
     # puts page
-    binding.pry
+    # binding.pry
      # page.css(".col-md-4").css("h2").text
 
 #this returns route names, except also has the empty ones
@@ -11,47 +11,10 @@ class ClassicAmericanRoadTrips::Scraper
       # route.create_from_index_page
       page.css(".col-md-4").each do |r|
       ClassicAmericanRoadTrips::Route.new_from_index_page(r)
+      # r.new_from_index_page
       # puts r.css("h2").text
 
       end
-
-
-      grabbed from route page:
-      r.css("h2").text  #name
-      r.css("p").each.with_index do | p, i|
-        case i
-          when 1
-            @paragraph = p.text
-            "paragraph: #{p.text}"
-          when 2
-            @highlights = p.text
-            "highlights: #{p.text}"
-          end
-      end
-
-
-      page.css(".col-md-4").each do |r|
-       r.css("p").each.with_index do | p, i|
-         puts "NEW ROUTE!!!!"
-         case i
-         when 1
-           puts "paragraph: #{p.text}"
-         when 2
-           puts "highlights: #{p.text}"
-         end
-         puts p.css("em").text
-       end
-     end
-
-
-
-
-
-
-
-
-
-
 
 
      #    page.css(".col-md-4").each do |r|

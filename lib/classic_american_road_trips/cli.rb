@@ -3,16 +3,20 @@ class ClassicAmericanRoadTrips::CLI
 
   def call
     puts "Welcome to Classic American Road Trips."
+    ClassicAmericanRoadTrips::Scraper.new.scrape_page
     run
   end
 
   def run
     puts "Please write the number of the road trip you would to learn more about."
-    puts "Routes:"
-    @routes = ["Pacific Coast", "Border to Border", "The Road to Nowhere", "The Great River Road", "Appalachian Trail", "Atlantic Coast", "The Great Northern", "The Oregon Trail", "The Loneliest Road", "Southern Pacific", "Route 66"]
-    @routes.each.with_index(1) do |r, i|
+    ClassicAmericanRoadTrips::Route.all.each.with_index(1) do |r|
       puts "#{i}. #{r}"
     end
+
+    # @routes = ["Pacific Coast", "Border to Border", "The Road to Nowhere", "The Great River Road", "Appalachian Trail", "Atlantic Coast", "The Great Northern", "The Oregon Trail", "The Loneliest Road", "Southern Pacific", "Route 66"]
+    # @routes.each.with_index(1) do |r, i|
+    #   puts "#{i}. #{r}"
+    # end
     # puts "1. Pacific Coast"
     # puts "2. Border to Border"
     # puts "3. The Road to Nowhere"
@@ -24,7 +28,7 @@ class ClassicAmericanRoadTrips::CLI
     # puts "9. The Loneliest Road"
     # puts "10. Southern Pacific"
     # puts "11. Route 66"
-    get_and_output
+    # get_and_output
   end
 
   def get_and_output
@@ -80,7 +84,7 @@ class ClassicAmericanRoadTrips::CLI
 
     end
 
-  
+
 
 
 
