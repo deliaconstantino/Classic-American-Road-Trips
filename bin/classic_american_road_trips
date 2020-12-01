@@ -10,4 +10,4 @@ trip.call
 # ClassicAmericanRoadTrips::Scraper.new.scrape_page
 
 
-trip.run
+# trip.run
