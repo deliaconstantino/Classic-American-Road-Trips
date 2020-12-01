@@ -1,5 +1,5 @@
 class ClassicAmericanRoadTrips::CLI
-  attr_accessor :routes
+  attr_accessor :number
 
   def call
     puts "Welcome to Classic American Road Trips."
@@ -8,10 +8,7 @@ class ClassicAmericanRoadTrips::CLI
   end
 
   def run
-    puts "Please write the number of the road trip you would to learn more about."
-    ClassicAmericanRoadTrips::Route.all.each.with_index(1) do |r|
-      puts "#{i}. #{r}"
-    end
+
 
     # @routes = ["Pacific Coast", "Border to Border", "The Road to Nowhere", "The Great River Road", "Appalachian Trail", "Atlantic Coast", "The Great Northern", "The Oregon Trail", "The Loneliest Road", "Southern Pacific", "Route 66"]
     # @routes.each.with_index(1) do |r, i|
@@ -28,7 +25,7 @@ class ClassicAmericanRoadTrips::CLI
     # puts "9. The Loneliest Road"
     # puts "10. Southern Pacific"
     # puts "11. Route 66"
-    # get_and_output
+    get_and_output
   end
 
   def get_and_output
@@ -84,14 +81,11 @@ class ClassicAmericanRoadTrips::CLI
 
     end
 
-
-
-
-
-
   end
-
-
 end
 
-#
+#idea for run method w/ scraped data:
+#   # puts "Please write the number of the road trip you would to learn more about."
+  # ClassicAmericanRoadTrips::Route.all.each.with_index(1) do |r|
+  #   puts "#{i}. #{r}"
+  # end

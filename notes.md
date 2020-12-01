@@ -19,6 +19,6 @@ Classic American Road trips
 
 
 classes needed:
-1. route-knows info about route including, name, number?, states visited, route highlights, info blurb, and where to look for more info
+1. route-knows info about route including: name, number?, route highlights, info blurb
 2. CLI: interacts for user and app, gets selection and outputs
 3. state? maybe cli can find routes that go through certain states?
