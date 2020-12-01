@@ -25,7 +25,7 @@ class ClassicAmericanRoadTrips::CLI
       puts " -----------------------------------------------"
       puts ""
       puts ""
-      puts "You picked number #{@number}: The #{ClassicAmericanRoadTrips::Route.all[@number - 1].name} Route"
+      puts "You picked number #{@number}: #{ClassicAmericanRoadTrips::Route.all[@number - 1].name} Route"
       puts ""
       puts "  Overview:"
       puts ""
