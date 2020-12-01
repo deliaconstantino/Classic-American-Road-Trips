@@ -9,6 +9,12 @@ class ClassicAmericanRoadTrips::CLI
 
   def run
 
+    ClassicAmericanRoadTrips::Route.all.each do |r| #WORKS--add index numbers
+      puts r.name
+    end
+
+
+      puts "please type the number of the trip you'd like to learn more about."
 
     # @routes = ["Pacific Coast", "Border to Border", "The Road to Nowhere", "The Great River Road", "Appalachian Trail", "Atlantic Coast", "The Great Northern", "The Oregon Trail", "The Loneliest Road", "Southern Pacific", "Route 66"]
     # @routes.each.with_index(1) do |r, i|
@@ -31,8 +37,8 @@ class ClassicAmericanRoadTrips::CLI
   def get_and_output
     num = gets.strip.to_i
     puts "You picked number #{num}:"
-    puts "#{@routes[num - 1]}"
-    info
+    puts "#{ClassicAmericanRoadTrips::Route.all[num - 1].name}"
+    # info
   end
 
   def info

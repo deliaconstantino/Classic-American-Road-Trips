@@ -3,30 +3,25 @@ class ClassicAmericanRoadTrips::Route
 
   @@all = []
 
-  def initialize(name = nil, highlights = [], description = nil, guidebook = nil)
+  def initialize(name = nil, highlights = nil, description = nil, guidebook = nil)
     @name = name
-    @highlights = []
-    @highlights << highlights
+    @highlights = highlights
     @description = description
     @guidebook = guidebook
     @@all << self
   end
 
-  def self.new_from_index_page(r)
+  def self.new_from_index_page(r) #WORKS
     #is called from an iterative method scraper class and assigns the basic info to each route:
-    # paragraph = r.css("p")
-
-binding.pry
-    object = ClassicAmericanRoadTrips::Route.new
-      object.name = r.css("h2").text
-      object.description = r.css("p")[1].text
-      object.highlights = r.css("p")[2].css("a").map { |a| a.text }
-      object.guidebook = r.css("p")[3].css("em").text
-
+    route = ClassicAmericanRoadTrips::Route.new
+    route.name = r.css("h2").text
+    route.description = r.css("p")[1].text
+    route.highlights = r.css("p")[2].css("a").map { |a| a.text }
+    route.guidebook = r.css("p")[3].css("em").text
   end
 
 
-  def self.all
+  def self.all  #WORKS
     @@all
   end
 end

@@ -4,5 +4,10 @@ require_relative "../lib/classic_american_road_trips"
 
 # puts "hello"
 
-ClassicAmericanRoadTrips::CLI.new.call
+trip = ClassicAmericanRoadTrips::CLI.new
+
+trip.call
 # ClassicAmericanRoadTrips::Scraper.new.scrape_page
+
+
+trip.run
