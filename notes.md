@@ -19,4 +19,5 @@ Classic American Road trips
 
 classes needed:
 1. route-knows info about route including: name, number?, route highlights, info blurb, related guidebook & link
-2. CLI: interacts for user and app, gets selection and outputs
+  --Route class also keeps track of all routes
+2. CLI: interacts for user and app, gets selection and outputs info grabbed from route class

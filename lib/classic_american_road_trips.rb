@@ -1,4 +1,4 @@
-# require "classic_american_road_trips/version"
+
 require 'open-uri'
 require 'nokogiri'
 require 'pry'

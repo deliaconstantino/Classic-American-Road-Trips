@@ -75,12 +75,19 @@ class ClassicAmericanRoadTrips::CLI
     puts "Please type the number that represents your choice."
     puts ""
 
+    implement_next_step
+  end
+
+def implement_next_step
     answer = gets.strip.to_i
     case answer
       when 1
         run
       when 2
         puts "Thank you for visiting. Bon voyage!"
+      else
+        puts "I didn't catch that. Please enter 1 or 2."
+        implement_next_step
     end
 
   end
@@ -95,6 +102,5 @@ class ClassicAmericanRoadTrips::CLI
 
     next_step
   end
-
 
 end
