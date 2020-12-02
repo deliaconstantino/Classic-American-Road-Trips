@@ -21,7 +21,7 @@ class ClassicAmericanRoadTrips::CLI
 
   def get_and_output
     @number = gets.strip.to_i
-    if @number > 0 && @number < 12
+    if @number > 0 && @number <= ClassicAmericanRoadTrips::Route.all.length
       puts " -----------------------------------------------"
       puts ""
       puts ""
