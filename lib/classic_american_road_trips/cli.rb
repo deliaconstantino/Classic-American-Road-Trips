@@ -53,9 +53,9 @@ class ClassicAmericanRoadTrips::CLI
 
   def learn_more
     reply = gets.strip
-    if reply == ("y" || "Y")
+    if ["Y", "YES"].include?(reply.upcase)
       more_info
-    elsif reply == ("n" || "N")
+    elsif ["N", "NO"].include?(reply.upcase)
       next_step
     else
       puts "I didn't catch that. Please type y or n."
